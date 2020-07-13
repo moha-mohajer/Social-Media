@@ -57,3 +57,4 @@
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/obj/Debug/netcoreapp3.1/DatingApp.api.csproj.CopyComplete
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
