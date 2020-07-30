@@ -44,3 +44,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Moha custom
+.vscode
+bin
+obj
+*.db
