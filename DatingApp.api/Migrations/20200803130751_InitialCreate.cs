@@ -3,17 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DatingApp.api.Migrations
 {
-    public partial class AddedUserEntity : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
-                name: "Name",
-                table: "Values",
-                nullable: true,
-                oldClrType: typeof(int),
-                oldType: "TEXT");
-
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
@@ -28,6 +21,19 @@ namespace DatingApp.api.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Values",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Values", x => x.Id);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -35,13 +41,8 @@ namespace DatingApp.api.Migrations
             migrationBuilder.DropTable(
                 name: "Users");
 
-            migrationBuilder.AlterColumn<int>(
-                name: "Name",
-                table: "Values",
-                type: "TEXT",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldNullable: true);
+            migrationBuilder.DropTable(
+                name: "Values");
         }
     }
 }
