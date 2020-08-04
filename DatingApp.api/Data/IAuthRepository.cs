@@ -3,7 +3,7 @@ using DatingApp.api.Models;
 
 namespace DatingApp.api.Data
 {
-    public interface IAuthRrepository
+    public interface IAuthRepository
     {
          Task <User> Register (User user, string password);
          
