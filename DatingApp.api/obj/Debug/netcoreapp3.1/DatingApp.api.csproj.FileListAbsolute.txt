@@ -59,3 +59,11 @@
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/obj/Debug/netcoreapp3.1/DatingApp.api.csproj.CopyComplete
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/package-lock.json
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
