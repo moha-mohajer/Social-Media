@@ -66,3 +66,4 @@
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/appsettings.json
