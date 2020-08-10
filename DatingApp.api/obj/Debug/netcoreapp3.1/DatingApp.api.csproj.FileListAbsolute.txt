@@ -1,5 +1,4 @@
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/appsettings.Development.json
-/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/DatingApp.api.deps.json
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/netcoreapp3.1/DatingApp.api.runtimeconfig.json
