@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2V5M3xXJtOoo6XlUWCcwRBvq8rt3o3nHBbYV6YGwGabFPqx8WWcb3DhIdKLyDQGrONfD+OUPQYWJIqXPLlxh2w==",
+  "dgSpecHash": "raRi9dSGVgqHj8i9Gpe+cuUYXDu1bxHHQkJVzrn7AwWfy8R04o4+0gBTOBfzOpE5MdTOhufzMbPXQKRrv6Z9rw==",
   "success": true,
-  "projectFilePath": "/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/DatingApp.API.csproj",
+  "projectFilePath": "/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/DatingApp.api.csproj",
   "expectedPackageFiles": [
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.1.6/microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
