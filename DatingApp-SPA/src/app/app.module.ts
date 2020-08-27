@@ -15,7 +15,6 @@ import { RegisterComponent } from './register/register.component';
 @NgModule({
    declarations: [		
       AppComponent,
-      ValueComponent,
       NavComponent,
       HomeComponent,
       RegisterComponent

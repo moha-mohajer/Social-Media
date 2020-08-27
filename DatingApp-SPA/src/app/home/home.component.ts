@@ -18,15 +18,19 @@ export class HomeComponent implements OnInit {
   }
 
   registerToggle(){
-    this.registerMode = !this.registerMode;
+    this.registerMode = true;
   }
 
-  getValue(){
+  getValue() {
     this.http.get('http://localhost:5000/api/values').subscribe(response => {
       this.values = response;
     }, error => {
       console.log(error);
     });
+  }
+
+  cancleRegisterMode(registerMode: boolean) {
+    this.registerMode = registerMode;
   }
 
 }
