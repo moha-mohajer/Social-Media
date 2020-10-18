@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "raRi9dSGVgqHj8i9Gpe+cuUYXDu1bxHHQkJVzrn7AwWfy8R04o4+0gBTOBfzOpE5MdTOhufzMbPXQKRrv6Z9rw==",
+  "dgSpecHash": "L86m6L1jnHJdxDtyNha4KINI1l1yWVTODoLx7gUZO/d6GBGmX3wFSOMzohs1s786w9Wx6cnAJrrrcp9lBUic4Q==",
   "success": true,
   "projectFilePath": "/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/DatingApp.api.csproj",
   "expectedPackageFiles": [
@@ -88,7 +88,8 @@
     "/Users/mohammadmohajerani/.nuget/packages/system.threading.tasks.extensions/4.3.0/system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/Users/mohammadmohajerani/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "/Users/mohammadmohajerani/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.2/microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
