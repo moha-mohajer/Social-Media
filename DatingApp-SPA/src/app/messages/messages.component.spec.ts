@@ -9,6 +9,7 @@ describe('MessagesComponent', () => {
   let component: MessagesComponent;
   let fixture: ComponentFixture<MessagesComponent>;
 
+  // tslint:disable-next-line: deprecation
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MessagesComponent ]
