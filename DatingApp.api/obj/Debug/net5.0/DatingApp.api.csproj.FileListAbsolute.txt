@@ -55,3 +55,10 @@
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/obj/Debug/net5.0/ref/DatingApp.api.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/obj/Debug/net5.0/DatingApp.api.pdb
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/obj/Debug/net5.0/DatingApp.api.genruntimeconfig.cache
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/Data/UserSeedData.json
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/AutoMapper.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

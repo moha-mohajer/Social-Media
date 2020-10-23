@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "tOm1Nj1cCVHLPNdqwbbWpTJbkgiJzPJk2azjf9DMyo8lvDhc1wyky7m3kFDwJdmfzaX5o2+RpYuPpLCP5OnlYg==",
+  "dgSpecHash": "mO8ujFapLa71ve4qMluoV8Ol0aAIA7QkAhiOAb1Li5qtpZobjBjU4oLVxvIKbBp4ipVro4Qf8B1K5hgUKCTdvA==",
   "success": true,
   "projectFilePath": "/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/DatingApp.api.csproj",
   "expectedPackageFiles": [
+    "/Users/mohammadmohajerani/.nuget/packages/automapper/10.1.0/automapper.10.1.0.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.0/automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.0-preview.8.20414.8/microsoft.aspnetcore.authentication.jwtbearer.5.0.0-preview.8.20414.8.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/microsoft.aspnetcore.jsonpatch/5.0.0-rc.2.20475.17/microsoft.aspnetcore.jsonpatch.5.0.0-rc.2.20475.17.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/5.0.0-rc.2.20475.17/microsoft.aspnetcore.mvc.newtonsoftjson.5.0.0-rc.2.20475.17.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.data.sqlite.core/5.0.0-preview.8.20407.4/microsoft.data.sqlite.core.5.0.0-preview.8.20407.4.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.5/microsoft.dotnet.platformabstractions.3.1.5.nupkg.sha512",
@@ -31,6 +35,8 @@
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.identitymodel.protocols/6.7.1/microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.7.1/microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.identitymodel.tokens/6.8.0/microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.3/sqlitepclraw.bundle_e_sqlite3.2.0.3.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/sqlitepclraw.core/2.0.3/sqlitepclraw.core.2.0.3.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.3/sqlitepclraw.lib.e_sqlite3.2.0.3.nupkg.sha512",
@@ -40,6 +46,7 @@
     "/Users/mohammadmohajerani/.nuget/packages/system.diagnostics.diagnosticsource/5.0.0-preview.8.20407.11/system.diagnostics.diagnosticsource.5.0.0-preview.8.20407.11.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/system.identitymodel.tokens.jwt/6.8.0/system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []

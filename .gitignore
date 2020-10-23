@@ -1,1 +1,5 @@
 DatingApp.api/bin/Debug/netcoreapp3.1/appsettings.json
+DatingApp.api/bin/Debug/net5.0/DatingApp.api.dll
+DatingApp.api/bin/Debug/net5.0/DatingApp.api.pdb
+DatingApp.api/obj/Debug/net5.0/ref/DatingApp.api.dll
+DatingApp.api/datingapp.db
