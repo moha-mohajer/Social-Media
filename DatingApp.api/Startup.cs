@@ -41,6 +41,8 @@ namespace DatingApp.api
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
             services.AddCors();
+            
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings")); // Using Cloudinary as a photo storage solution      
             services.AddAutoMapper(typeof(DatingRepository).Assembly); //Using AutoMapper Part 1
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IDatingRepository, DatingRepository>(); //Creating a new repository for our API

@@ -13,5 +13,7 @@ namespace DatingApp.api.Data
          Task<bool> SaveAll(); // when we save our changes banks the database will be zero changes to save.
          Task<IEnumerable<User>> GetUsers();
          Task<User> GetUser(int id);
+         Task<Photo> GetPhoto(int id);
+         Task<Photo> GetMainPhotoForUser(int userId);
     }
 }

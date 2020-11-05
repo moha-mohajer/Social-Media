@@ -62,3 +62,4 @@
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/AutoMapper.dll
 /Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/bin/Debug/net5.0/CloudinaryDotNet.dll

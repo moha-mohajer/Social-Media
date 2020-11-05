@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mO8ujFapLa71ve4qMluoV8Ol0aAIA7QkAhiOAb1Li5qtpZobjBjU4oLVxvIKbBp4ipVro4Qf8B1K5hgUKCTdvA==",
+  "dgSpecHash": "i/9aRMbFwHmkCSnxsne2nawvDeJLRuA+j42OQf1I5n4syaH53b2WJKIXXmT7x0XWdamljLMXxjULcCRcBGpBwA==",
   "success": true,
   "projectFilePath": "/Users/mohammadmohajerani/Desktop/Demo/DatingApp/DatingApp.api/DatingApp.api.csproj",
   "expectedPackageFiles": [
     "/Users/mohammadmohajerani/.nuget/packages/automapper/10.1.0/automapper.10.1.0.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.0/automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "/Users/mohammadmohajerani/.nuget/packages/cloudinarydotnet/1.13.1/cloudinarydotnet.1.13.1.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.0-preview.8.20414.8/microsoft.aspnetcore.authentication.jwtbearer.5.0.0-preview.8.20414.8.nupkg.sha512",
     "/Users/mohammadmohajerani/.nuget/packages/microsoft.aspnetcore.jsonpatch/5.0.0-rc.2.20475.17/microsoft.aspnetcore.jsonpatch.5.0.0-rc.2.20475.17.nupkg.sha512",

@@ -26,6 +26,7 @@
       "DatingApp.api/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
+          "CloudinaryDotNet": "1.13.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.0-preview.8.20414.8",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.0-rc.2.20475.17",
           "Microsoft.EntityFrameworkCore": "5.0.0-preview.8.20407.4",
@@ -353,6 +354,17 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "CloudinaryDotNet/1.13.1": {
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {
+            "assemblyVersion": "1.13.1.0",
+            "fileVersion": "1.13.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -2519,6 +2531,13 @@
       "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
+    },
+    "CloudinaryDotNet/1.13.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LembXe3pvwKdFAvNaZvSJXiVaRpo+HL/V1UfyHpv3PXTVcjXxuak3+BGgNjM5jfI5TOngWi0oUMLYZ7sBHuWHA==",
+      "path": "cloudinarydotnet/1.13.1",
+      "hashPath": "cloudinarydotnet.1.13.1.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

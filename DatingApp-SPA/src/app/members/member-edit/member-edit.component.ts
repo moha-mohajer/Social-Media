@@ -14,8 +14,10 @@ import { AuthService } from 'src/app/_services/auth.service';
 export class MemberEditComponent implements OnInit {
   @ViewChild('editForm', { static: true }) editForm: NgForm; // Acces the form to reset
   user: User;
+  photoUrl: string;
   // prevent lose unsaved on closing the windows
   @HostListener('window:beforeunload', ['$event'])
+  // tslint:disable-next-line: typedef
   unloadNotification($event: any) {
     if (this.editForm.dirty) {
       $event.returnValue = true;
@@ -29,12 +31,17 @@ export class MemberEditComponent implements OnInit {
     private authService: AuthService
   ) {}
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.user = data[`user`];
     });
+
+    //
+    this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
   }
 
+  // tslint:disable-next-line: typedef
   updateUser() {
     this.userService
       .updateUser(this.authService.decodedToken.nameid, this.user)
@@ -47,5 +54,10 @@ export class MemberEditComponent implements OnInit {
           this.alertify.error(error);
         }
       );
+  }
+  //
+  // tslint:disable-next-line: typedef
+  updateMainPhoto(photoUrl) {
+    this.user.photoUrl = photoUrl;
   }
 }

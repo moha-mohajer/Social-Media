@@ -25,6 +25,7 @@
     "bootstrap": "^4.5.3",
     "bootswatch": "^4.5.2",
     "font-awesome": "^4.7.0",
+    "ng2-file-upload": "^1.4.0",
     "ngx-bootstrap": "^6.1.0",
     "ngx-gallery": "^5.10.0",
     "resolve-url": "^0.2.1",
