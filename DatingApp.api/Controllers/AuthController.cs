@@ -25,6 +25,7 @@ namespace DatingApp.apiontrollers
         //
         public AuthController(IAuthRepository repo, IConfiguration config, IMapper mapper)
         {
+            _mapper = mapper;
             _config = config;
             _repo = repo;
 
@@ -85,8 +86,12 @@ namespace DatingApp.apiontrollers
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return Ok (new {
-                token = tokenHandler.WriteToken(token)
+            var user = _mapper.Map<UserForListDto>(userFromRepo);
+
+            return Ok(new
+            {
+                token = tokenHandler.WriteToken(token),
+                user
             });
             
         }

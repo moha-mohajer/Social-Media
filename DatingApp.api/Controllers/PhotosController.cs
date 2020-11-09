@@ -76,7 +76,7 @@ namespace DatingApp.api.Controllers
                 }
             }
 
-            photoForCreationDto.Url = uploadResult.Uri.ToString();
+            photoForCreationDto.Url = uploadResult.Url.ToString();
             photoForCreationDto.PublicId = uploadResult.PublicId;
 
             var photo = _mapper.Map<Photo>(photoForCreationDto);
@@ -125,6 +125,7 @@ namespace DatingApp.api.Controllers
             return BadRequest("Could not set photo to main");
         }
 
+        // Adding the Delete photo function to the API
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePhoto(int userId, int id)
         {
@@ -132,27 +133,32 @@ namespace DatingApp.api.Controllers
                 return Unauthorized();
 
             var user = await _repo.GetUser(userId);
-
+            
+            // if Photo exist on gallary
             if (!user.Photos.Any(p => p.Id == id))
-                return Unauthorized();
+                // return Unauthorized();
+                return BadRequest("Not allowed. You are about to delete a photo that does not exist!");
 
             var photoFromRepo = await _repo.GetPhoto(id);
 
+            // prevent removing main photo
             if (photoFromRepo.IsMain)
                 return BadRequest("You cannot delete your main photo");
 
 
             if (photoFromRepo.PublicId != null)
             {
-                var deleteParams = new DeletionParams(photoFromRepo.PublicId);
-                var result = _cloudinary.Destroy(deleteParams);
+                var deleteParams = new DeletionParams(photoFromRepo.PublicId); 
+                var result = _cloudinary.Destroy(deleteParams); // resoult from cloudinary
 
+                // remove frome cloudinary
                 if (result.Result == "ok")
                 {
                     _repo.Delete(photoFromRepo);
                 }
             }
 
+            // if not store on cludeinary removeit from repo
             if (photoFromRepo.PublicId == null)
             {
                 _repo.Delete(photoFromRepo);

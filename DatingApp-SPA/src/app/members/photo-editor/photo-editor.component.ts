@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-photo-editor',
   templateUrl: './photo-editor.component.html',
-  styleUrls: ['./photo-editor.component.css']
+  styleUrls: ['./photo-editor.component.css'],
 })
 export class PhotoEditorComponent implements OnInit {
   @Input() photos: Photo[];
@@ -48,11 +48,11 @@ export class PhotoEditorComponent implements OnInit {
       allowedFileType: ['image'],
       removeAfterUpload: true,
       autoUpload: false,
-      maxFileSize: 10 * 1024 * 1024
+      maxFileSize: 10 * 1024 * 1024,
     });
 
     // Prevent error of our file not going with credential
-    this.uploader.onAfterAddingFile = file => {
+    this.uploader.onAfterAddingFile = (file) => {
       file.withCredentials = false;
     };
 
@@ -64,22 +64,25 @@ export class PhotoEditorComponent implements OnInit {
           url: res.url,
           dateAdded: res.dateAdded,
           description: res.description,
-          isMain: res.isMain
+          isMain: res.isMain,
         };
         this.photos.push(photo);
       }
     };
   }
 
+  // Adding the Set Main Photo functionality to the SPA
   // tslint:disable-next-line: typedef
   setMainPhoto(photo: Photo) {
     this.userService
       .setMainPhoto(this.authService.decodedToken.nameid, photo.id)
       .subscribe(
         () => {
-          this.currentMain = this.photos.filter(p => p.isMain === true)[0];
+          this.currentMain = this.photos.filter((p) => p.isMain === true)[0];
           this.currentMain.isMain = false;
           photo.isMain = true;
+
+          // Using BehaviorSubject to add any to any communication to our app.
           this.authService.changeMemberPhoto(photo.url);
           this.authService.currentUser.photoUrl = photo.url;
           localStorage.setItem(
@@ -87,12 +90,13 @@ export class PhotoEditorComponent implements OnInit {
             JSON.stringify(this.authService.currentUser)
           );
         },
-        error => {
+        (error) => {
           this.alertify.error(error);
         }
       );
   }
 
+  // Adding the Delete Photo functionality to the SPA
   // tslint:disable-next-line: typedef
   deletePhoto(id: number) {
     this.alertify.confirm('Are you sure you want to delete this photo?', () => {
@@ -100,10 +104,13 @@ export class PhotoEditorComponent implements OnInit {
         .deletePhoto(this.authService.decodedToken.nameid, id)
         .subscribe(
           () => {
-            this.photos.splice(this.photos.findIndex(p => p.id === id), 1);
+            this.photos.splice(
+              this.photos.findIndex((p) => p.id === id),
+              1
+            );
             this.alertify.success('Photo has been deleted');
           },
-          error => {
+          (error) => {
             this.alertify.error('Failed to delete the photo');
           }
         );

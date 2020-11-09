@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/_services/auth.service';
 export class MemberEditComponent implements OnInit {
   @ViewChild('editForm', { static: true }) editForm: NgForm; // Acces the form to reset
   user: User;
-  photoUrl: string;
+  photoUrl: string; // Using BehaviorSubject to add any to any communication to our app.
   // prevent lose unsaved on closing the windows
   @HostListener('window:beforeunload', ['$event'])
   // tslint:disable-next-line: typedef
@@ -36,8 +36,7 @@ export class MemberEditComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.user = data[`user`];
     });
-
-    //
+    // Using BehaviorSubject to add any to any communication to our app.
     this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
   }
 

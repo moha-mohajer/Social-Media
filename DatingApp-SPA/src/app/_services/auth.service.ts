@@ -11,7 +11,7 @@ import { User } from '../_models/user';
 })
 export class AuthService {
   // baseUrl = 'http://localhost:5000/api/auth/';
-  baseUrl = environment.apiUrl + 'auth/'; //
+  baseUrl = environment.apiUrl + 'auth/'; // create shortcut for accesss baseurl
   jwtHelper = new JwtHelperService();
   decodedToken: any;
   //
@@ -23,8 +23,9 @@ export class AuthService {
 
   // tslint:disable-next-line: typedef
   changeMemberPhoto(photoUrl: string) {
-    throw new Error('Method not implemented.');
+    this.photoUrl.next(photoUrl);
   }
+
 
   // tslint:disable-next-line: typedef
   login(model: any) {
@@ -35,12 +36,13 @@ export class AuthService {
           localStorage.setItem('token', user.token);
 
           //
-          localStorage.setItem('user', JSON.stringify(user.User));
+          localStorage.setItem('user', JSON.stringify(user.user));
 
           this.decodedToken = this.jwtHelper.decodeToken(user.token);
 
           //
           this.currentUser = user.user;
+          // Using BehaviorSubject to add any to any communication to our app.
           this.changeMemberPhoto(this.currentUser.photoUrl);
 
         }

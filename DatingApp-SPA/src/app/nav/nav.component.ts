@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
-    //
+    // Using BehaviorSubject to add any to any communication to our app.
     this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);
   }
 

@@ -5,7 +5,8 @@
     </div>
     <div class="col-sm-8">
       <div *ngIf="editForm.dirty" class="alert alert-info">
-        <strong>Information:</strong> You have made changes. Any unsaved changes will be lost!
+        <strong>Information:</strong> You have made changes. Any unsaved changes
+        will be lost!
       </div>
     </div>
   </div>
@@ -32,7 +33,11 @@
           </div>
         </div>
         <div class="card-footer">
-          <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">
+          <button
+            [disabled]="!editForm.dirty"
+            form="editForm"
+            class="btn btn-success btn-block"
+          >
             Save changes
           </button>
         </div>
@@ -59,7 +64,10 @@
             </form>
           </tab>
           <tab heading="Edit Photos">
-            <p>Photo edit will go here</p>
+            <app-photo-editor
+              [photos]="user.photos"
+              (getMemberPhotoChange)="updateMainPhoto($event)"
+            ></app-photo-editor>
           </tab>
         </tabset>
       </div>
