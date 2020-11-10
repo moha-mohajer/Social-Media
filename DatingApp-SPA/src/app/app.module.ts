@@ -1,12 +1,11 @@
 import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
-// Setting up routing in Angular
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router'; // Setting up routing in Angular
 
 import { AppComponent } from './app.component';
 import { AuthService } from './_services/auth.service';
@@ -25,13 +24,12 @@ import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { JwtModule } from '@auth0/angular-jwt';
-//
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
-// Adding the Set Main Photo functionality to the SPA
-import { FileUploadModule } from 'ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload'; // Adding the Set Main Photo functionality to the SPA
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; // Handling Dates in Forms
 
 
 // tslint:disable-next-line: typedef
@@ -57,8 +55,10 @@ export function tokenGetter() {
       BrowserModule,
       HttpClientModule,
       FormsModule,
+      ReactiveFormsModule, // Introduction to Reactive Forms in Angular
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
+      BsDatepickerModule.forRoot(), // Handling Dates in Forms
       RouterModule.forRoot(appRoutes), // Setting up routing in Angular
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),

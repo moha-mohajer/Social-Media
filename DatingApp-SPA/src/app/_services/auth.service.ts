@@ -51,8 +51,12 @@ export class AuthService {
   }
 
   // tslint:disable-next-line: typedef
-  register(model: any) {
-    return this.http.post(this.baseUrl + 'register', model);
+  // register(model: any) {
+  //   return this.http.post(this.baseUrl + 'register', model);
+
+  // tslint:disable-next-line: typedef
+  register(user: User) { // Completing the Registration implementation
+    return this.http.post(this.baseUrl + 'register', user);
   }
 
   // tslint:disable-next-line: typedef
