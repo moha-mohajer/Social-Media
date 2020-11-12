@@ -8,9 +8,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { RouterModule } from '@angular/router'; // Setting up routing in Angular
 
 import { AppComponent } from './app.component';
-import { AuthService } from './_services/auth.service';
 import { NavComponent } from './nav/nav.component';
-import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import {ErrorInterceptorProvider} from './_services/error.interceptor';
@@ -30,6 +28,8 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload'; // Adding the Set Main Photo functionality to the SPA
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; // Handling Dates in Forms
+import { TimeagoModule } from 'ngx-timeago'; // Useig timeago pipe for dates in Angular
+
 
 
 // tslint:disable-next-line: typedef
@@ -64,6 +64,8 @@ export function tokenGetter() {
       RouterModule.forRoot(appRoutes),
       NgxGalleryModule,
       FileUploadModule,
+      TimeagoModule.forRoot(), //Using a timeago pipe for dates in Angular
+      
       JwtModule.forRoot({
          config: {
             tokenGetter,

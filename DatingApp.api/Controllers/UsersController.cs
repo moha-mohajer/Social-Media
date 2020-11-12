@@ -8,10 +8,12 @@ using DatingApp.api.Data;
 using DatingApp.api.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using DatingApp.api.Helpers; //
 
 // Creating the Users Controller
 namespace DatingApp.api.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))] // Using Action Filters
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
