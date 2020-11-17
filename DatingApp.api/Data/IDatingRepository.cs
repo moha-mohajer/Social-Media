@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DatingApp.api.Models;
+using DatingApp.api.Helpers;
 
 namespace DatingApp.api.Data
 {
@@ -11,7 +12,8 @@ namespace DatingApp.api.Data
          void Add<T>(T entity) where T: class;
          void Delete<T>(T entity) where T: class;
          Task<bool> SaveAll(); // when we save our changes banks the database will be zero changes to save.
-         Task<IEnumerable<User>> GetUsers();
+        //  Task<IEnumerable<User>> GetUsers();
+         Task<PagedList<User>> GetUsers(UserParams userParams); //Implementing pagination in the API
          Task<User> GetUser(int id);
          Task<Photo> GetPhoto(int id);
          Task<Photo> GetMainPhotoForUser(int userId);

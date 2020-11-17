@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DatingApp.api.Models;
 using Microsoft.EntityFrameworkCore;
+using DatingApp.api.Helpers;
 
 namespace DatingApp.api.Data
 {
@@ -43,11 +45,37 @@ namespace DatingApp.api.Data
             return user;
         }
 
-        public async Task<IEnumerable<User>> GetUsers()
+        public async Task<PagedList<User>> GetUsers(UserParams userParams) //Implementing pagination in the API
         {
-            var users = await _context.Users.Include(p => p.Photos).ToListAsync();
+            var users = _context.Users.Include(p => p.Photos)// Implementing pagination in the API
+                .OrderByDescending(u => u.LastActive).AsQueryable(); // Sorting results in the API
 
-            return users;
+            users = users.Where(u => u.Id != userParams.UserId); // Filtering in the API
+
+            users = users.Where(u => u.Gender == userParams.Gender); // Filtering in the API
+
+            if (userParams.MinAge != 18 || userParams.MaxAge != 99) // Adding additional filtering parameters to the API
+            {
+                var minDob = DateTime.Today.AddYears(-userParams.MaxAge - 1);
+                var maxDob = DateTime.Today.AddYears(-userParams.MinAge);
+
+                users = users.Where(u => u.DateOfBirth >= minDob && u.DateOfBirth <= maxDob);
+            }
+
+            if (!string.IsNullOrEmpty(userParams.OrderBy)) // Sorting results in the API
+            {
+                switch (userParams.OrderBy)
+                {
+                    case "created":
+                        users = users.OrderByDescending(u => u.Created);
+                        break;
+                    default:
+                        users = users.OrderByDescending(u => u.LastActive);
+                        break;
+                }
+            }
+
+            return await PagedList<User>.CreateAsync(users, userParams.PageNumber, userParams.PageSize);
         }
 
         public async Task<bool> SaveAll()

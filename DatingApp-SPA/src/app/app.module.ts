@@ -29,6 +29,10 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { FileUploadModule } from 'ng2-file-upload'; // Adding the Set Main Photo functionality to the SPA
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; // Handling Dates in Forms
 import { TimeagoModule } from 'ngx-timeago'; // Useig timeago pipe for dates in Angular
+import { ButtonsModule } from 'ngx-bootstrap/buttons'; // Add the buttons component
+import { PaginationModule } from 'ngx-bootstrap/pagination'; // Pagination links for multi-page
+
+
 
 
 
@@ -59,13 +63,14 @@ export function tokenGetter() {
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
       BsDatepickerModule.forRoot(), // Handling Dates in Forms
+      ButtonsModule.forRoot(), // Adding the Sorting functionality to the SPA
+      PaginationModule.forRoot(), // Using nix-bootstrap pagination module
       RouterModule.forRoot(appRoutes), // Setting up routing in Angular
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       NgxGalleryModule,
       FileUploadModule,
-      TimeagoModule.forRoot(), //Using a timeago pipe for dates in Angular
-      
+      TimeagoModule.forRoot(), // Using a timeago pipe for dates in Angular
       JwtModule.forRoot({
          config: {
             tokenGetter,
@@ -74,9 +79,8 @@ export function tokenGetter() {
          }
       })
    ],
-   // Error handler in the API
    providers: [
-      ErrorInterceptorProvider,
+      ErrorInterceptorProvider, // Error handler in the API
       //
       MemberDetailResolver,
       MemberListResolver,
