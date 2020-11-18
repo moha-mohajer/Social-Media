@@ -52,7 +52,9 @@ namespace DatingApp.api.Data
 
             users = users.Where(u => u.Id != userParams.UserId); // Filtering in the API
 
+            if(userParams.Gender != "both"){
             users = users.Where(u => u.Gender == userParams.Gender); // Filtering in the API
+            }
 
             if (userParams.MinAge != 18 || userParams.MaxAge != 99) // Adding additional filtering parameters to the API
             {
