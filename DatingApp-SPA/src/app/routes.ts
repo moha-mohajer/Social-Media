@@ -10,6 +10,7 @@ import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 // Setting up routing in Angular
 export const appRoutes: Routes = [
@@ -21,9 +22,11 @@ export const appRoutes: Routes = [
     // Protecting our routes with a route guard
     canActivate: [AuthGuard],
     children: [
-      // { path: 'members', component: MemberListComponent },
-      //
-      { path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver} },
+      {
+      path: 'members',
+      component: MemberListComponent,
+      resolve: {users: MemberListResolver}
+      },
       {
         path: 'members/:id',
         component: MemberDetailComponent,
@@ -35,8 +38,15 @@ export const appRoutes: Routes = [
         resolve: {user: MemberEditResolver},
         canDeactivate: [PreventUnsavedChanges]
       },
-      { path: 'messages', component: MessagesComponent },
-      { path: 'lists', component: ListsComponent }
+      {
+        path: 'messages',
+        component: MessagesComponent
+      },
+      {
+       path: 'lists',
+       component: ListsComponent,
+       resolve: {users: ListsResolver} // Creating the Lists component
+      }
     ]
   },
   { path: '**', redirectTo: '', pathMatch: 'full' }  // Setting up routing in Angular

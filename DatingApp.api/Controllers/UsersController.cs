@@ -9,6 +9,7 @@ using DatingApp.api.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using DatingApp.api.Helpers; //
+using DatingApp.api.Models;
 
 // Creating the Users Controller
 namespace DatingApp.api.Controllers
@@ -21,7 +22,7 @@ namespace DatingApp.api.Controllers
     {
         private readonly IDatingRepository _repo;
         private readonly IMapper _mapper; //Using AutoMapper 
-        public UsersController(IDatingRepository repo,IMapper mapper)
+        public UsersController(IDatingRepository repo, IMapper mapper)
         {
             _mapper = mapper; //Using AutoMapper
             _repo = repo;
@@ -29,7 +30,7 @@ namespace DatingApp.api.Controllers
 
         [HttpGet]
         public async Task<IActionResult> GetUsers(
-            [FromQuery]UserParams userParams // Implementing pagination in the API
+            [FromQuery] UserParams userParams // Implementing pagination in the API
             )
         {
             var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); // Filtering in the API
@@ -47,7 +48,7 @@ namespace DatingApp.api.Controllers
 
             var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users); // Replace maper to hide some data on returning user data
 
-            Response.AddPagination(users.CurrentPage, users.PageSize, 
+            Response.AddPagination(users.CurrentPage, users.PageSize,
                  users.TotalCount, users.TotalPages); // Implementing pagination in the API
 
             return Ok(usersToReturn);
@@ -63,7 +64,7 @@ namespace DatingApp.api.Controllers
 
             return Ok(userToReturn);
         }
-        
+
         // Use put to update 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, UserForUpdateDto userForUpdateDto)
@@ -81,5 +82,35 @@ namespace DatingApp.api.Controllers
 
             throw new Exception($"Updating user {id} failed on save");
         }
+
+        // Adding the Send Like functionality in the API    
+        
+        [HttpPost("{id}/like/{recipientId}")]
+         public async Task<IActionResult> LikeUser(int id, int recipientId)
+         {
+             if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                 return Unauthorized();
+
+              var like = await _repo.GetLike(id, recipientId);
+
+              if (like != null)
+                 return BadRequest("You already like this user");
+
+              if (await _repo.GetUser(recipientId) == null)
+                 return NotFound();
+
+              like = new Like
+             {
+                 LikerId = id,
+                 LikeeId = recipientId
+             };
+
+              _repo.Add<Like>(like);
+
+              if (await _repo.SaveAll())
+                 return Ok();
+
+              return BadRequest("Failed to like user");
+         }
     }
 }

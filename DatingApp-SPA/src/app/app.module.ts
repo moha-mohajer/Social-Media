@@ -1,37 +1,37 @@
-import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { JwtModule } from '@auth0/angular-jwt';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { RouterModule } from '@angular/router'; // Setting up routing in Angular
-
-import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import {ErrorInterceptorProvider} from './_services/error.interceptor';
-import { ListsComponent } from './lists/lists.component';
-import { MessagesComponent } from './messages/messages.component';
-import { appRoutes } from './routes';
-import { MemberCardComponent } from './members/member-card/member-card.component';
-import { MemberDetailComponent } from './members/member-detail/member-detail.component';
-import { MemberListResolver } from './_resolvers/member-list.resolver';
-import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
-import { MemberListComponent } from './members/member-list/member-list.component';
-import { NgxGalleryModule } from '@kolkov/ngx-gallery';
-import { JwtModule } from '@auth0/angular-jwt';
-import { MemberEditResolver } from './_resolvers/member-edit.resolver';
-import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
-import { MemberEditComponent } from './members/member-edit/member-edit.component';
-import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
-import { FileUploadModule } from 'ng2-file-upload'; // Adding the Set Main Photo functionality to the SPA
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; // Handling Dates in Forms
 import { TimeagoModule } from 'ngx-timeago'; // Useig timeago pipe for dates in Angular
 import { ButtonsModule } from 'ngx-bootstrap/buttons'; // Add the buttons component
 import { PaginationModule } from 'ngx-bootstrap/pagination'; // Pagination links for multi-page
+import { HttpClientModule } from '@angular/common/http';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { FileUploadModule } from 'ng2-file-upload'; // Adding the Set Main Photo functionality to the SPA
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'; // Handling Dates in Forms
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 
+import { appRoutes } from './routes';
+import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
+import { ListsResolver } from './_resolvers/lists.resolver';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import { RegisterComponent } from './register/register.component';
+import { MemberListResolver } from './_resolvers/member-list.resolver';
+import { MemberEditResolver } from './_resolvers/member-edit.resolver';
+import { MemberListComponent } from './members/member-list/member-list.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
+import { MemberCardComponent } from './members/member-card/member-card.component';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 
 
@@ -87,6 +87,8 @@ export function tokenGetter() {
       //
       MemberEditResolver,
       PreventUnsavedChanges,
+
+      ListsResolver, // Creating the Lists component
    ],
    bootstrap: [
       AppComponent
